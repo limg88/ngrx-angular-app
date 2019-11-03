@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img
+      [src]="article.imagePath"
+      alt="{{ article.name }}"
+      class="img-responsive"
+      style="max-height: 300px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ article.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      class="btn-group"
+      appDropdown>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Article <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;" (click)="onEditArticle()">Edit Article</a></li>
+        <li><a style="cursor: pointer;" (click)="onDeleteArticle()">Delete Article</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ article.description }}
+  </div>
+</div>
